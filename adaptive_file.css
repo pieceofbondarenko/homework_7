@@ -1,0 +1,146 @@
+html {
+  display: grid;
+  font-size: 2em;
+}
+
+/* body {
+    display: grid;
+    grid-template: 100px 300px 100px/2fr 1fr;
+    grid-template-areas:
+      'header header'
+      'main aside'
+      'footer footer';
+    text-align: center;
+  } */
+
+/* body {
+  display: grid;
+  height: 100vh;
+  /* width: 100vh;  
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 15% 1fr 15%;
+  grid-template-areas:
+    'header header'
+    'main aside'
+    'footer footer';
+  text-align: center;
+  justify-content: center;
+}   */
+
+@media screen and (min-width: 599px) {
+  /* footer {
+    display: grid;
+    background-color: lightgray;
+    grid-area: footer;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+  } */
+
+  footer {
+    display: none;
+  }
+
+  body {
+    display: grid;
+    height: 87vh;
+    width: 100vw;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 25% 1fr 25%;
+    grid-template-areas:
+      'header header'
+      'main aside'
+      'footer footer';
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  footer {
+    display: grid;
+    background-color: lightgray;
+    grid-area: footer;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+
+  body {
+    display: grid;
+    height: 87vh;
+    width: 100vw;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 15% 1fr 15%;
+    grid-template-areas:
+      'header header'
+      'main aside'
+      'footer footer';
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 399px) {
+  footer {
+    display: none;
+  }
+
+  header {
+    height: 30vh;
+  }
+
+  main {
+    height: 30vh;
+  }
+
+  aside {
+    height: 30vh;
+  }
+}
+
+header {
+  background-color: lightgray;
+  grid-area: header;
+}
+
+main {
+  display: grid;
+  background-color: #fefad3;
+  grid-area: main;
+  grid-template: 3fr 1fr 1fr/1fr 1fr;
+  grid-template-areas:
+    'main_name main_name'
+    'info1 info2'
+    'info3 info3';
+  grid-gap: 10px;
+}
+
+#main_name {
+  grid-area: main_name;
+}
+
+.info {
+  background-color: #fbdeae;
+  height: 30px;
+}
+
+#info1 {
+  grid-area: info1;
+}
+#info2 {
+  grid-area: info2;
+}
+#info3 {
+  grid-area: info3;
+}
+
+aside {
+  background-color: #bdecb6;
+  grid-area: aside;
+}
+
+.section_footer {
+  background-color: white;
+  width: 20vw;
+  height: 10vh;
+  /* height: 80%; */
+}
